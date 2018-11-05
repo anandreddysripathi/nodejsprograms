@@ -7,3 +7,8 @@ function fibonacci(num) {
   }
   var a=process.argv[2]-1;
  console.log(fibonacci(a));
+ 
+The output for the above programming is
+----------------------------------------
+    C:\Users\ANAND\Operations>node fibonacci.js 4
+    [ 0, 1, 1, 2, 3 ]
