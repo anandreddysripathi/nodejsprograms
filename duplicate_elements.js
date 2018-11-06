@@ -1,19 +1,15 @@
-arr=process.argv.slice(2);
- len=arr.length;
- var array=[];
-for(i=0; i<len; i++)
-   {
-    for(j=i+1;j<len;j++)
-    {
-    if(Number(arr[i])==Number(arr[j]))
-    {
-     array.push(Number(arr[i]));
-    }
-   }
-   }
-   console.log("the duplicate elements found are : "+array);
-   
+var arr =process.argv.slice(2);
+  var empty = [], multiple = [];
+for(var i = 0; i < arr.length; i++)
+{
+  if(empty.includes(arr[i]) && !multiple.includes(arr[i]))
+    multiple.push(arr[i])
+  else
+    empty.push(arr[i]);
+}
+console.log("The repeated elements are:"+multiple);
+
    The output of the above program is:
    -----------------------------------
-   C:\Users\ANAND\Operations>node index.js 6 2 3 4 6 1 4  3 1
-   the duplicate elements found are : 6,3,4,1
+   C:\Users\ANAND\Operations>node index.js 2 3 2 3 3 4  4
+   The repeated elements are:2,3,4
