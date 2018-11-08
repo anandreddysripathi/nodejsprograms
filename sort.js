@@ -3,9 +3,7 @@ function Sort(arr){
         for (var i=len-1; i>=0; i--){
           for(var j = 1; j<=i; j++){
             if(Number(arr[j-1])>Number(arr[j])) {
-                var temp = Number(arr[j-1]);
-                arr[j-1] =Number(arr[j]);
-                arr[j] = temp;
+                arr[j-1]=(Number(arr[j-1])+Number(arr[j]))-((arr[j])=Number(arr[j-1]));
              }
           }
         }
